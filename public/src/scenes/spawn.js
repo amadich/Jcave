@@ -626,6 +626,12 @@ class spawn extends Phaser.Scene {
 
         }, this);
 
+        const add_to_fullscreen = this.add.text(275,650,"F للعب علـى شاشة كاملـة أضغط ", {
+            color: "gold"
+        }); 
+        setTimeout(() => {
+            add_to_fullscreen.destroy();
+        },2000)
 // End Full screen Page
 
 
