@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #input-form input {
+            position: absolute;
+            width: 240px;
+            padding-left: 10px;
+            font-size: 20px;
+            z-index: +1;
+            outline: none;
+            background: none;
+            border: none;
+            color: gold;
+            font-family: monospace;
+            cursor: url("assets/input/cursors/2392.png") , pointer;
+        }
+        ::placeholder{color: #ffffff;}
+        #user {
+            position: absolute;
+            margin-top: 42px;
+        }
+        #pwd {
+            position: absolute;
+            margin-top: 85px;
+        }
+    </style>
+</head>
+<body>
+    <div id="input-form">
+        <input type="text" name="chat" id="user" placeholder="E-mail or Useranme"> <br>
+        <input type="password" name="chat" id="pwd" placeholder="E-Password">
+    </div>
+</body>
+</html>
