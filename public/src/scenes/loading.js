@@ -10,7 +10,7 @@ class loading extends Phaser.Scene {
         
         var width = this.cameras.main.width;
         var height = this.cameras.main.height;
-        var loadingText = this.make.text({
+       /* var loadingText = this.make.text({
             x: width / 2,
             y: height / 2 - 50,
             text: 'Loading...',
@@ -20,14 +20,14 @@ class loading extends Phaser.Scene {
             }
         });
         loadingText.setOrigin(0.5, 0.5);
-        
+        */
         var percentText = this.make.text({
             x: width / 2,
             y: height / 2 - 5,
             text: '0%',
             style: {
                 font: '18px monospace',
-                fill: 'green'
+                fill: 'greenyellow'
             }
         });
         percentText.setOrigin(0.5, 0.5);
@@ -46,7 +46,7 @@ class loading extends Phaser.Scene {
         this.load.on('progress', function (value) {
             percentText.setText(parseInt(value * 100) + '%');
             progressBar.clear();
-            progressBar.fillStyle(0xffffff, 1);
+            progressBar.fillStyle(0x009688, 1);
             progressBar.fillRect(0, 280, 1000 * value, 30);
         });
         
@@ -56,7 +56,7 @@ class loading extends Phaser.Scene {
         this.load.on('complete', function () {
             progressBar.destroy();
             progressBox.destroy();
-            loadingText.destroy();
+            /*loadingText.destroy();*/
             percentText.destroy();
             /*assetText.destroy();*/
         });
