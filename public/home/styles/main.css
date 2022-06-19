@@ -1,6 +1,7 @@
 body {
     margin: 0;
     cursor: url("../../assets/input/cursors/2392.png"),pointer;
+    background-color: #1e6151;
 }
 aside {
     margin: 0;
