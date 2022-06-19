@@ -6,10 +6,12 @@ class loading extends Phaser.Scene {
         var progressBar = this.add.graphics();
         var progressBox = this.add.graphics();
         progressBox.fillStyle(0x222222, 0.8);
-        progressBox.fillRect(0, 280, 0, 0);
-        
+        progressBox.fillRect(340, 350, 320, 50);
+
         var width = this.cameras.main.width;
         var height = this.cameras.main.height;
+        
+
        /* var loadingText = this.make.text({
             x: width / 2,
             y: height / 2 - 50,
@@ -26,11 +28,13 @@ class loading extends Phaser.Scene {
             y: height / 2 - 5,
             text: '0%',
             style: {
-                font: '18px monospace',
+                font: '18px cursive',
                 fill: 'greenyellow'
             }
         });
         percentText.setOrigin(0.5, 0.5);
+
+        var sslogo = this.add.image(width/2,(height/2)-100,"loadlogo");
         
       /*  var assetText = this.make.text({
             x: width / 2,
@@ -46,8 +50,9 @@ class loading extends Phaser.Scene {
         this.load.on('progress', function (value) {
             percentText.setText(parseInt(value * 100) + '%');
             progressBar.clear();
-            progressBar.fillStyle(0x009688, 1);
-            progressBar.fillRect(0, 280, 1000 * value, 30);
+            progressBar.fillStyle(0xffffff, 1); // 0x009688
+            progressBar.fillRect(350, 360, 300 * value, 30);
+            
         });
         
         /*this.load.on('fileprogress', function (file) {
@@ -56,9 +61,10 @@ class loading extends Phaser.Scene {
         this.load.on('complete', function () {
             progressBar.destroy();
             progressBox.destroy();
-            /*loadingText.destroy();*/
+            //loadingText.destroy();
             percentText.destroy();
             /*assetText.destroy();*/
+            
         });
 
 
